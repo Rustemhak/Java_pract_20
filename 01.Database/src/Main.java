@@ -30,10 +30,10 @@ public class Main {
 
         resultSet.close();
 
-        resultSet = statement.executeQuery("select m.value as l_value, exam_id,student_id,last_name   from mark as m  left join students s on s.id = m.student_id;");
+        resultSet = statement.executeQuery("select m.value as m_value, exam_id,student_id,last_name   from mark as m  left join student s on s.id = m.student_id;");
 
         while (resultSet.next()) {
-            System.out.println("value  " + resultSet.getInt("l_value"));
+            System.out.println("value  " + resultSet.getInt("m_value"));
             System.out.println("Exam ID " + resultSet.getInt("exam_id"));
             System.out.println("Student ID " + resultSet.getInt("student_id"));
             System.out.println("Student Last Name " + resultSet.getString("last_name"));
