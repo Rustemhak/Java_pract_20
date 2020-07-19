@@ -12,21 +12,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
             integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
             crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 </head>
 <script>
     function getUsers() {
         $.getJSON("/users", function (response) {
-            let html1= response["name"]+" "+ response["surname"];
-            $("#fi").append(html1);
-            $("#info").append(response["info"]);
+            let html= response["name"]+" "+ response["surname"];
+            $("#fi").append(html);
+            html = response["dis"];
+            $("#dis").append(html);
+            html = response["email"];
+            $("#email").append(html);
+            html = response["phone"];
+            $("#phone").append(html);
         });
     }
 </script>
 
 <body>
 <button onclick="getUsers()">Получить данные</button>
-<!--<div id="users_table">-->
+<div id="users_table">
 <div class="container">
     <div class="d-flex flex-column align-items-center justify-content-center">
         <div class="card mb-3" style="max-width: 1000px; margin-top: 30px">
@@ -38,13 +45,19 @@
                 <div class="col-md-8">
 
                     <div class="card-body d-flex flex-column align-items-center justify-content-between">
-                        <h5 class="card-title p-2"><div id="fi"></div></h5>
+                        <h5 class="card-title p-2"><div id="fi">
+
+                        </div></h5>
                         <p class="card-text p-2">
-                        <div id="info"></div>
+                        <div id="dis">
+
+                    </div>
                           </p>
                         <div class="contacts p-2">
-                            <p><strong>email: rustemhak@mail.ru</strong> </p>
-                            <p><strong>телефон: 891213456780</strong> </p>
+                            <p><strong>email: <div id="email">
+                            </div> </strong> </p>
+                            <p><strong>телефон: <div id="phone">
+                            </div></strong> </p>
                         </div>
                     </div>
                 </div>
@@ -58,8 +71,6 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
 </body>
 </html>
