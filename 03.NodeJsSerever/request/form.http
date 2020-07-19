@@ -1,0 +1,11 @@
+POST http://localhost/form
+Content-Type: application/json
+
+{
+  "name": "Rustem"
+}
+
+###
+GET http://localhost/form
+
+###

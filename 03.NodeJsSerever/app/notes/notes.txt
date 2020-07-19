@@ -1,0 +1,1 @@
+{"id":"c1570cf1-4515-492e-a958-3ceb834709d1","name":"Хакимуллин Рустем","dis":"Java","email":"rus@mail.ru","phone":"8912345678"};{"id":"3fb1cb46-e717-4b80-99a3-40babd55d755","name":"Царева Екатерина","dis":"Lineage 2","email":"er@mail.ru","phone":"8912345678"};{"id":"ee72c5e3-13c0-401e-887c-b7ee15fddb25","name":"21312","dis":"312","email":"er@mail.ru","phone":"891151"};
